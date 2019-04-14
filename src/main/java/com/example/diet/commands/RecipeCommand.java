@@ -17,6 +17,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 public class RecipeCommand {
+
     private Long id;
 
     @NotBlank
@@ -25,23 +26,12 @@ public class RecipeCommand {
 
     @Min(1)
     @Max(999)
-    private Integer prepTime;
-
-    @Min(1)
-    @Max(999)
-    private Integer cookTime;
-
-    @Min(1)
-    @Max(100)
-    private Integer servings;
-    private String source;
-
-    @URL
-    private String url;
+    private Integer totalTime;
 
     @NotBlank
     private String directions;
 
+    private Integer calories;
     private Set<IngredientCommand> ingredients = new HashSet<>();
     private Byte[] image;
     private Difficulty difficulty;

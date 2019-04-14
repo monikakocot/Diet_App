@@ -31,15 +31,10 @@ public class RecipeToRecipeCommand implements Converter<Recipe, RecipeCommand> {
 
         final RecipeCommand command = new RecipeCommand();
         command.setId(source.getId());
-        command.setCookTime(source.getCookTime());
-        command.setPrepTime(source.getPrepTime());
+        command.setTotalTime(source.getTotalTime());
         command.setDescription(source.getDescription());
         command.setDifficulty(source.getDifficulty());
         command.setDirections(source.getDirections());
-        command.setServings(source.getServings());
-        command.setSource(source.getSource());
-        command.setUrl(source.getUrl());
-
 
         if (source.getCategories() != null && source.getCategories().size() > 0){
             source.getCategories()
