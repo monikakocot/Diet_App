@@ -103,9 +103,6 @@ public class RecipeBootstrap  implements ApplicationListener<ContextRefreshedEve
                 "\n" +
                 "Read more: http://www.simplyrecipes.com/recipes/perfect_guacamole/#ixzz4jvpiV9Sd");
 
-
-
-
         //very redundent - could add helper method, and make this simpler
         guacRecipe.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUom));
         guacRecipe.addIngredient(new Ingredient("Kosher salt", new BigDecimal(".5"), teapoonUom));
@@ -116,10 +113,96 @@ public class RecipeBootstrap  implements ApplicationListener<ContextRefreshedEve
         guacRecipe.addIngredient(new Ingredient("freshly grated black pepper", new BigDecimal(2), dashUom));
         guacRecipe.addIngredient(new Ingredient("ripe tomato, seeds and pulp removed, chopped", new BigDecimal(".5"), eachUom));
 
+        //add to return list
         guacRecipe.getCategories().add(getCategories().get(1));
+        recipes.add(guacRecipe);
+
+        //Recipe nr 2
+        Recipe tacoRecipe = new Recipe();
+        tacoRecipe.setDescription("Tacos");
+        tacoRecipe.setTotalTime(30);
+        tacoRecipe.setCalories(500);
+        tacoRecipe.setDifficulty(Difficulty.MODERATE);
+        tacoRecipe.setDirections("1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. " +
+                "\n" +
+                "2 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. " +
+                "\n" +
+                "3 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? .\n" +
+                "4 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, " +
+                "eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam " +
+                "voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem " +
+                "sequi nesciunt.\n" +
+                "\n" +
+                "\n" +
+                "Read more: http://somewhereovertherainbow.pl");
+
+        //very redundent - could add helper method, and make this simpler
+        tacoRecipe.addIngredient(new Ingredient("taco", new BigDecimal(2), eachUom));
+        tacoRecipe.addIngredient(new Ingredient("Salt", new BigDecimal(".5"), teapoonUom));
+        tacoRecipe.addIngredient(new Ingredient("Lemon juice", new BigDecimal(2), tableSpoonUom));
+        tacoRecipe.addIngredient(new Ingredient("Tomatos", new BigDecimal(2), tableSpoonUom));
+
 
         //add to return list
-        recipes.add(guacRecipe);
+        tacoRecipe.getCategories().add(getCategories().get(1));
+        recipes.add(tacoRecipe);
+
+        //Recipe nr 3
+        Recipe eggsRecipe = new Recipe();
+        eggsRecipe.setDescription("Scrambled eggs");
+        eggsRecipe.setTotalTime(10);
+        eggsRecipe.setCalories(150);
+        eggsRecipe.setDifficulty(Difficulty.EASY);
+        eggsRecipe.setDirections("1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. " +
+                "\n" +
+                "2 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. " +
+                "\n" +
+                "3 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? .\n" +
+                "4 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, " +
+                "eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam " +
+                "voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem " +
+                "sequi nesciunt.\n" +
+                "\n" +
+                "\n" +
+                "Read more: http://somewhereovertherainbow.pl");
+
+        //very redundent - could add helper method, and make this simpler
+        eggsRecipe.addIngredient(new Ingredient("taco", new BigDecimal(2), eachUom));
+        eggsRecipe.addIngredient(new Ingredient("Salt", new BigDecimal(".1"), teapoonUom));
+        eggsRecipe.addIngredient(new Ingredient("onion", new BigDecimal(1), pintUom));
+
+        //add to return list
+        eggsRecipe.getCategories().add(getCategories().get(0));
+        recipes.add(eggsRecipe);
+
+        //Recipe nr 3
+        Recipe saladRecipe = new Recipe();
+        saladRecipe.setDescription("Fruit salad");
+        saladRecipe.setTotalTime(10);
+        saladRecipe.setCalories(100);
+        saladRecipe.setDifficulty(Difficulty.EASY);
+        saladRecipe.setDirections("1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. " +
+                "\n" +
+                "2 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. " +
+                "\n" +
+                "3 Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? .\n" +
+                "4 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, " +
+                "eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam " +
+                "voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem " +
+                "sequi nesciunt.\n" +
+                "\n" +
+                "\n" +
+                "Read more: http://somewhereovertherainbow.pl");
+
+        //very redundent - could add helper method, and make this simpler
+        saladRecipe.addIngredient(new Ingredient("banan", new BigDecimal(1), eachUom));
+        saladRecipe.addIngredient(new Ingredient("apple", new BigDecimal(".1"), eachUom));
+        saladRecipe.addIngredient(new Ingredient("orange", new BigDecimal(1), eachUom));
+
+        //add to return list
+        saladRecipe.getCategories().add(getCategories().get(2));
+        recipes.add(saladRecipe);
+
 
         return  recipes;
     }
@@ -155,9 +238,6 @@ public class RecipeBootstrap  implements ApplicationListener<ContextRefreshedEve
         categories.add(dinnernCategory);
         categories.add(dessertCategory);
         return categories;
-
     }
-
-
 
 }
